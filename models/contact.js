@@ -74,7 +74,7 @@ async function resolveQuery(query, params, successMessage, errorMessage) {
         else return { status: false, msg: errorMessage }
 
     } catch (e) {
-        return { status: false, msg: "Error occured " + e.message }
+        return { status: false, msg: "Error occured "}
     }
 }
 
