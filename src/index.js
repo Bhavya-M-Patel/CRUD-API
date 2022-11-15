@@ -54,7 +54,7 @@ app.get('/getContact', token_utils.verifyToken, async (req, res) => {
 
 // get List of Contacts
 app.get('/getAllContacts', token_utils.verifyToken, async (req, res) => {
-        let result = await Contacts.getAllContact(req.body);
+    let result = await Contacts.getAllContact({user_id:res.locals.user_id});
         res.status(200).send(result);
 })
 
